@@ -16,10 +16,11 @@ to invoke vscode from the terminal
 code
 
 type in terminal
-xvlog  -sv svrand.sv 
-xelab  -debug typical tb -s top_sim
-xsim  top_sim -t xsim_run.tcl  [xsim  top_sim  this also will do]
-
+<li><ol>
+  xvlog  -sv svrand.sv </ol><ol>
+xelab  -debug typical tb -s top_sim</ol>
+<ol>xsim  top_sim -t xsim_run.tcl  [xsim  top_sim  this also will do]</ol>
+</li>
 The following commands are with full path
 
 /home/student/xilinx/tools/Vivado/2021.2/bin/xvlog  -sv svrand.sv 
