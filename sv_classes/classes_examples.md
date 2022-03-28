@@ -29,5 +29,17 @@ function new () is called the constructor and is automatically called upon objec
 <b><i>display ()</i></b> is a function, and rightly so, because displaying values does not consume simulation time.<br/>
 function new ()has default values to the arguments, and hence line 6 (below) will create a packet object with values<br/>
 
-<h2>How can I access signals within a class ?<br/>
+How can I access signals within a class ?<br/>
 To do that, you have to create an <i><b>object</b></i> of the class, which can be used as a handle to its properties and methods.
+	
+	module tb_top;
+	myPacket pkt0, pkt1;
+		
+	initial begin
+		pkt0 = new (3'h2, 2'h3);
+		pkt0.display ();
+		
+		pkt1 = new ();
+		pkt1.display ();
+	end
+endmodule 
