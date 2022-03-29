@@ -43,3 +43,17 @@ To do that, you have to create an <i><b>object</b></i> of the class, which can b
 		pkt1.display ();
 	end
 endmodule 
+
+
+<b>How do I create an array of classes ?</b><br/>
+<p>An array of classes can be created in a way similar to how you create an <code>int</code> type array.<br/>
+	module tb_top;
+	myPacket pkt0 [3];
+	
+	initial begin
+    	for(int i = 0; i < $size (pkt0); i++) begin
+   	   		pkt0[i] = new ();
+       		pkt0[i].display ();
+   		end
+   	end
+endmodule
