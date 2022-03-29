@@ -60,3 +60,23 @@ endmodule
    		end
    	end
 endmodule
+
+</pre><h2>What is inheritance ?</h2><p>Let's say you wanted to have a class with all the properties/methods of <code>myPacket</code> and be able to add more stuff in it without changing <code>myPacket</code>, the best way to do so is by <i>inheritance</i>. In the example below, networkPacket inherits the properties/methods of myPacket using the <code>extend</code> keyword. To call the functions of base class (myPacket), use <code>super</code> keyword.</p><pre>  <code class="language-verilog match-braces line-numbers">
+  
+class networkPkt extends myPacket;
+	bit        parity;
+	bit [1:0]  crc;
+	
+	function new ();
+		super.new ();
+		this.parity = 1;
+		this.crc = 3;
+	endfunction
+	
+	function display ();
+		super.display();
+		$display ("Parity = %0b, CRC = 0x%0h", this.parity, this.crc);
+	endfunction
+endclass
+
+  </code>
