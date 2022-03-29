@@ -3,7 +3,7 @@
 A SystemVerilog class is an Object Oriented Programming concept that is used 
 to encapsulate data (property) and functions/tasks (methods) that operate on data.
 
-<code>
+<body>
 
 class myPacket;
 	bit [2:0]  header;
@@ -24,7 +24,7 @@ class myPacket;
 		           this.header, this.encode, this.mode, this.stop);
 	endfunction
 endclass
-</code>
+</body>
 Note the points : <br/>
 function new () is called the constructor and is automatically called upon object creation.<br/>
 <b>this</b> keyword is used to refer to the current class. Normally used within a class to refer to its own properties/methods.<br/>
