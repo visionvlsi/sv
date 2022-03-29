@@ -48,7 +48,7 @@ endmodule
 <b>How do I create an array of classes ?</b><br/>
 <p>An array of classes can be created in a way similar to how you create an <code>int</code> type array.</p><br/>
 	
-	<code>module tb_top;
+	module tb_top;
 	myPacket pkt0 [3];
 	
 	initial begin
@@ -57,4 +57,4 @@ endmodule
        		pkt0[i].display ();
    		end
    	end
-endmodule</code>
+endmodule
