@@ -31,3 +31,23 @@ endmodule
 
   </code>
 </pre>
+</pre><h2>Abstract Class Example</h2><p>Let us declare the class <span class=signal>BaseClass</span> as <code>virtual</code> to make it an <i>abstract</i> class and see what happens.</p><pre>  <code class="language-verilog match-braces line-numbers">
+  
+virtual class BaseClass;
+	int data;
+	
+	function new();
+		data = 32'hc0de_c0de;
+	endfunction
+endclass
+
+module tb;
+	BaseClass base;
+	initial begin
+		base = new();
+		$display ("data=0x%0h", base.data);
+	end
+endmodule
+
+  </code>
+</pre>
