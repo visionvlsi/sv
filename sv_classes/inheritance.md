@@ -11,7 +11,7 @@
  ExtPacket  is extended  and hence is a child class of Packet. . Being a child class, it inherits properties and methods from its parent. If there exists a function with the same name in both the parent and child class, then its invocation will depend on the type of the object handle used to call that function. In the example below, both Packet  and ExtPacket  have a function called display() . When this function is called by a child class handle, the child class display()  function will be executed. If this function is called by a parent class handle, then the parent class 
 display()  function will be executed.
 
-
+<code class="language-verilog match-braces line-numbers">
 class Packet;
    int addr;
 
@@ -54,3 +54,4 @@ module tb;
 		sc.display ();
 	end
 endmodule
+</code>
