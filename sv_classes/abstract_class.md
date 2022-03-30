@@ -108,3 +108,4 @@ endmodule
 
   </code>
 </pre>
+<p class="alert alert-warning">The pure virtual method prototype and its implementation should have the same arguments and return type.</p>
