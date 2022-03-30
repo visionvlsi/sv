@@ -1,0 +1,1 @@
+A loop  is a piece of code that keeps executing over and over. A conditional statement is typically included in a loop so that it can terminate once the condition becomes true. If the loop runs forever, then the simulation will hang indefinitely.
