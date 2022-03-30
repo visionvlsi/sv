@@ -82,3 +82,29 @@ endmodule
   </code>
 </pre>
 <p>It can be seen from the simulation output below that it is perfectly valid to extend abstract classes to form other classes that can be instantiated using <code>new()</code> method.</p>
+
+<h2>Pure Virtual Methods</h2><p>A <code>virtual</code> method inside an abstract class can be declared with the keyword <code>pure</code> and is called a <i>pure virtual</i> method. Such methods only require a prototype to be specified within the abstract class and the implementation is left to defined within the sub-classes.</p><h2>Pure Method Example</h2><pre>  <code class="language-verilog match-braces line-numbers">
+  
+virtual class BaseClass;
+	int data;
+	
+	pure virtual function int getData();
+endclass
+
+class ChildClass extends BaseClass;
+	virtual function int getData();
+		data = 32'hcafe_cafe;
+		return data;
+	endfunction
+endclass
+
+module tb;
+	ChildClass child;
+	initial begin
+		child = new();
+		$display ("data = 0x%0h", child.getData());
+	end
+endmodule
+
+  </code>
+</pre>
