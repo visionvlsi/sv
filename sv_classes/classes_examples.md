@@ -39,9 +39,8 @@ function new () is called the constructor and is automatically called upon objec
 function new ()has default values to the arguments, and hence line 6 (below) will create a packet object with values<br/>
 
 How can I access signals within a class ?<br/>
-To do that, you have to create an <i><b>object</b></i> of the class, which can be used as a handle to its properties and methods.
-	
-	<pre> <code>
+To do that, you have to create an <i><b>object</b></i> of the class, which can be used as a handle to its properties and methods.<br/>
+<pre> <code>
 	module tb_top;
 	myPacket pkt0, pkt1;
 		
@@ -53,7 +52,6 @@ To do that, you have to create an <i><b>object</b></i> of the class, which can b
 		pkt1.display ();
 	end
 endmodule 
-
 </pre> </code>
 <b>How do I create an array of classes ?</b><br/>
 <p>An array of classes can be created in a way similar to how you create an <code>int</code> type array.</p><br/>
