@@ -1,3 +1,9 @@
+# What are classes ?
+
+<p>class is a user-defined datatype, an OOP construct, that can be used to encapsulate data (property) and tasks/functions (methods) which operate on the data.</p>
+
+
+
 # Classes examples 
 
 A SystemVerilog class is an Object Oriented Programming concept that is used 
