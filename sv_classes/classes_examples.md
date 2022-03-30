@@ -30,7 +30,7 @@ class myPacket;
 		           this.header, this.encode, this.mode, this.stop);
 	endfunction
 endclass
-</pre> </code><br/>
+</code></pre> <br/>
 
 Note the points : <br/>
 function new () is called the constructor and is automatically called upon object creation.<br/>
@@ -52,7 +52,7 @@ To do that, you have to create an <i><b>object</b></i> of the class, which can b
 		pkt1.display ();
 	end
 endmodule 
-</pre> </code>
+ </code></pre>
 <b>How do I create an array of classes ?</b><br/>
 <p>An array of classes can be created in a way similar to how you create an <code>int</code> type array.</p><br/>
 
@@ -67,7 +67,7 @@ endmodule
    		end
    	end
 endmodule
-</pre> </code>
+ </code></pre>
 
 <h2>What is inheritance ?</h2><p>Let's say you wanted to have a class with all the properties/methods of <code>myPacket</code> and be able to add more stuff in it without changing <code>myPacket</code>, the best way to do so is by <i>inheritance</i>. In the example below, networkPacket inherits the properties/methods of myPacket using the <code>extend</code> keyword. To call the functions of base class (myPacket), use <code>super</code> keyword.</p><pre>  <code class="language-verilog match-braces line-numbers">
 class networkPkt extends myPacket;
@@ -86,4 +86,25 @@ class networkPkt extends myPacket;
 	endfunction
 endclass
 
-</pre> </code>
+ </code></pre>
+
+<h2>What is an abstract/virtual class ?</h2>
+
+<p>If you create an abstract class using the virtual  keyword, then you cannot create an object of the class. This is useful if you don't want others to create an object of the class and instead force users to keep the abstract class as the base and extend it to create child classes for their purpose.
+
+<pre>  <code class="language-verilog match-braces line-numbers">
+  
+// Creation of base class object is invalid
+virtual class Base;
+   bit [7:0]   data;
+   bit         enable;
+   
+endclass
+
+// Creation of child class object is valid
+class Child extends Base;
+  // User definition
+endclass
+
+  </code>
+</pre>
