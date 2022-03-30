@@ -70,7 +70,6 @@ endmodule
 </pre> </code>
 
 <h2>What is inheritance ?</h2><p>Let's say you wanted to have a class with all the properties/methods of <code>myPacket</code> and be able to add more stuff in it without changing <code>myPacket</code>, the best way to do so is by <i>inheritance</i>. In the example below, networkPacket inherits the properties/methods of myPacket using the <code>extend</code> keyword. To call the functions of base class (myPacket), use <code>super</code> keyword.</p><pre>  <code class="language-verilog match-braces line-numbers">
-  <pre> <code>
 class networkPkt extends myPacket;
 	bit        parity;
 	bit [1:0]  crc;
