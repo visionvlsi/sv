@@ -54,3 +54,30 @@ endmodule
 <p>A compilation error is reported by the simulator as shown below since abstract classes are not allowed to be instantiated.</p>
 
 On EDAPlay ground https://www.edaplayground.com/x/Di_n
+
+</pre><h2>Extending Abstract Classes</h2><p>Abstract classes can be extended just like any other SystemVerilog class using the <code>extends</code> keyword like shown below.</p><pre>  <code class="language-verilog match-braces line-numbers">
+  
+virtual class BaseClass;
+	int data;
+	
+	function new();
+		data = 32'hc0de_c0de;
+	endfunction
+endclass
+
+class ChildClass extends BaseClass;
+	function new();
+		data = 32'hfade_fade;
+	endfunction
+endclass
+
+module tb;
+	ChildClass child;
+	initial begin
+		child = new();
+		$display ("data=0x%0h", child.data);
+	end
+endmodule
+
+  </code>
+</pre>
