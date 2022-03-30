@@ -10,7 +10,7 @@ A SystemVerilog class is an Object Oriented Programming concept that is used
 to encapsulate data (property) and functions/tasks (methods) that operate on data.<br/>
 
 
-
+<pre> <code>
 class myPacket;
 	bit [2:0]  header;
 	bit        encode;
@@ -29,7 +29,8 @@ class myPacket;
 		$display ("Header = 0x%0h, Encode = %0b, Mode = 0x%0h, Stop = %0b", 
 		           this.header, this.encode, this.mode, this.stop);
 	endfunction
-endclass<br/>
+endclass
+</pre> </code><br/>
 
 Note the points : <br/>
 function new () is called the constructor and is automatically called upon object creation.<br/>
@@ -40,6 +41,7 @@ function new ()has default values to the arguments, and hence line 6 (below) wil
 How can I access signals within a class ?<br/>
 To do that, you have to create an <i><b>object</b></i> of the class, which can be used as a handle to its properties and methods.
 	
+	<pre> <code>
 	module tb_top;
 	myPacket pkt0, pkt1;
 		
@@ -52,10 +54,10 @@ To do that, you have to create an <i><b>object</b></i> of the class, which can b
 	end
 endmodule 
 
-
+</pre> </code>
 <b>How do I create an array of classes ?</b><br/>
 <p>An array of classes can be created in a way similar to how you create an <code>int</code> type array.</p><br/>
-	
+	<pre> <code>
 	module tb_top;
 	myPacket pkt0 [3];
 	
@@ -66,9 +68,9 @@ endmodule
    		end
    	end
 endmodule
-
+</pre> </code>
 </pre><h2>What is inheritance ?</h2><p>Let's say you wanted to have a class with all the properties/methods of <code>myPacket</code> and be able to add more stuff in it without changing <code>myPacket</code>, the best way to do so is by <i>inheritance</i>. In the example below, networkPacket inherits the properties/methods of myPacket using the <code>extend</code> keyword. To call the functions of base class (myPacket), use <code>super</code> keyword.</p><pre>  <code class="language-verilog match-braces line-numbers">
-  
+  <pre> <code>
 class networkPkt extends myPacket;
 	bit        parity;
 	bit [1:0]  crc;
@@ -85,4 +87,4 @@ class networkPkt extends myPacket;
 	endfunction
 endclass
 
-  </code>
+</pre> </code>
