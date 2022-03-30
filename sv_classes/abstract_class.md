@@ -81,3 +81,4 @@ endmodule
 
   </code>
 </pre>
+<p>It can be seen from the simulation output below that it is perfectly valid to extend abstract classes to form other classes that can be instantiated using <code>new()</code> method.</p>
