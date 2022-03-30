@@ -52,3 +52,5 @@ endmodule
   </code>
 </pre>
 <p>A compilation error is reported by the simulator as shown below since abstract classes are not allowed to be instantiated.</p>
+
+On EDAPlay ground https://www.edaplayground.com/x/Di_n
